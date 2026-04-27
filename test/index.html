@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+      }
+
+      /* Header */
+      header {
+        background-color: #05141f;
+        height: 60px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 0 40px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      /* Logo */
+      .logo a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+      }
+
+      .logo svg {
+        width: 50px;
+        height: auto;
+        fill: #ffffff;
+      }
+
+      /* Nav */
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 48px;
+      }
+
+      nav ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        transition: color 0.2s;
+      }
+
+      nav ul li a:hover {
+        color: #bbbbbb;
+      }
+
+      /* Header Right */
+      .header-right {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .lang-selector {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #ffffff;
+        font-size: 13px;
+        font-weight: 500;
+      }
+
+      .lang-selector a {
+        color: #ffffff;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      .lang-selector a:hover {
+        color: #bbbbbb;
+      }
+
+      .lang-selector a.active {
+        color: #aaaaaa;
+      }
+
+      .lang-divider {
+        color: #555555;
+      }
+
+      .search-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 4px;
+        display: flex;
+        align-items: center;
+      }
+
+      .search-btn svg {
+        width: 20px;
+        height: 20px;
+        stroke: #ffffff;
+        fill: none;
+        transition: stroke 0.2s;
+      }
+
+      .search-btn:hover svg {
+        stroke: #bbbbbb;
+      }
+
+      /* 기존 스타일 */
+      /* div { background: red; }
+        .divWrap {
+            background: skyblue;
+            width: 500px;
+        }
+        body > p { background-color: black; } */
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- Logo -->
+      <div class="logo">
+        <a href="#">
+          <!-- Kia SVG 로고 -->
+          <svg viewBox="0 0 280 100" xmlns="http://www.w3.org/2000/svg">
+            <g fill="#ffffff">
+              <!-- K -->
+              <polygon
+                points="0,10 0,90 22,90 22,58 58,90 86,90 44,52 84,10 57,10 22,45 22,10"
+              />
+              <!-- I -->
+              <rect x="100" y="10" width="22" height="80" />
+              <!-- A -->
+              <polygon
+                points="170,10 130,90 154,90 162,73 218,73 226,90 250,90 210,10"
+              />
+              <polygon points="190,10 172,48 208,48" />
+            </g>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Navigation -->
+      <nav>
+        <ul>
+          <li><a href="#">Brand</a></li>
+          <li><a href="#">Design</a></li>
+          <li><a href="#">Vehicle</a></li>
+          <li><a href="#">Innovation</a></li>
+          <li><a href="#">Newsroom</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right: Language + Search -->
+      <div class="header-right">
+        <div class="lang-selector">
+          <a href="#" class="active">KR</a>
+          <span class="lang-divider">|</span>
+          <a href="#">EN</a>
+        </div>
+        <button class="search-btn" aria-label="검색">
+          <svg
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="11" cy="11" r="7" />
+            <line x1="16.5" y1="16.5" x2="22" y2="22" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <p>Lorem ipsum dolor sit.</p>
+    <div class="divWrap">
+      test
+      <p class="text">Lorem, ipsum dolor.</p>
+    </div>
+    <div>
+      test
+      <p>Lorem ipsum dolor sit.</p>
+    </div>
+    <p>test11111</p>
+  </body>
+</html>
