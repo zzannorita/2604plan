@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+      }
+
+      .top-bar {
+        height: 78px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #1f2328;
+        font-weight: 600;
+        font-size: 19px;
+        position: relative;
+        background: transparent;
+      }
+
+      .top-left,
+      .top-right {
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+
+      .top-left {
+        gap: 42px;
+        padding: 0 34px;
+      }
+
+      .top-center {
+        display: flex;
+        align-items: center;
+        gap: 56px;
+        padding: 0 42px;
+      }
+
+      .top-center .logo {
+        font-size: 36px;
+        letter-spacing: 6px;
+        font-weight: 800;
+      }
+
+      .top-right {
+        gap: 30px;
+        padding: 0 36px;
+        font-size: 17px;
+      }
+
+      .divider {
+        width: 1px;
+        height: 78px;
+        background-color: rgba(31, 35, 40, 0.18);
+      }
+
+      .mini {
+        font-size: 15px;
+      }
+
+      .mobile-toggle {
+        display: none;
+        width: 48px;
+        height: 48px;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+        padding: 0;
+      }
+
+      .mobile-toggle .line {
+        display: block;
+        width: 24px;
+        height: 2px;
+        margin: 5px auto;
+        background-color: #1f2328;
+      }
+
+      .mobile-menu {
+        display: none;
+      }
+
+      .mobile-menu.is-open {
+        display: block;
+        position: absolute;
+        top: 78px;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        background: transparent;
+        padding: 14px 20px 20px;
+      }
+
+      .mobile-menu nav {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        font-size: 17px;
+        color: #1f2328;
+      }
+
+      .mobile-menu .menu-separator {
+        height: 1px;
+        margin: 14px 0;
+        background-color: rgba(31, 35, 40, 0.15);
+      }
+
+      @media (max-width: 900px) {
+        .top-bar {
+          padding: 0 16px;
+          font-size: 16px;
+        }
+
+        .top-left,
+        .top-right,
+        .divider {
+          display: none;
+        }
+
+        .top-center {
+          gap: 16px;
+          padding: 0;
+        }
+
+        .top-center .logo {
+          font-size: 30px;
+          letter-spacing: 4px;
+        }
+
+        .mobile-toggle {
+          display: block;
+          margin-left: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="top-bar">
+      <nav class="top-left" aria-label="메인 메뉴">
+        <span>차량</span>
+        <span>구매</span>
+        <span>체험</span>
+        <span>이벤트</span>
+        <span>고객 지원</span>
+      </nav>
+      <div class="divider" aria-hidden="true"></div>
+
+      <div class="top-center">
+        <span>Discover Kia</span>
+        <span class="logo">KIA</span>
+      </div>
+      <div class="divider" aria-hidden="true"></div>
+
+      <div class="top-right">
+        <span>PBV</span>
+        <span class="mini">KR</span>
+        <span>통합검색</span>
+        <span>로그인</span>
+      </div>
+
+      <button
+        class="mobile-toggle"
+        type="button"
+        aria-label="메뉴 열기"
+        aria-expanded="false"
+      >
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+
+      <div class="mobile-menu" id="mobile-menu">
+        <nav aria-label="모바일 메뉴">
+          <span>차량</span>
+          <span>구매</span>
+          <span>체험</span>
+          <span>이벤트</span>
+          <span>고객 지원</span>
+          <div class="menu-separator" aria-hidden="true"></div>
+          <span>Discover Kia</span>
+          <span>PBV</span>
+          <span>KR</span>
+          <span>통합검색</span>
+          <span>로그인</span>
+        </nav>
+      </div>
+    </header>
+    <main></main>
+    <footer></footer>
+    <script>
+      const toggleButton = document.querySelector('.mobile-toggle');
+      const mobileMenu = document.querySelector('#mobile-menu');
+
+      toggleButton.addEventListener('click', () => {
+        const isOpen = mobileMenu.classList.toggle('is-open');
+        toggleButton.setAttribute('aria-expanded', String(isOpen));
+      });
+    </script>
+  </body>
+</html>
