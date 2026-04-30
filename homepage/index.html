@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOMEPAGEKOREA</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="top-header">
+      <div class="top-header__inner">
+        <a class="logo" href="index.html">로고</a>
+        <nav aria-label="메인 메뉴">
+          <ul class="main-menu">
+            <li><a href="sub01.html">회사소개</a></li>
+            <li><a href="sub02.html">제품소개</a></li>
+            <li><a href="sub03.html">온라인문의</a></li>
+            <li><a href="sub04.html">게시판</a></li>
+          </ul>
+        </nav>
+        <button
+          class="hamburger-btn"
+          id="hamburgerBtn"
+          type="button"
+          aria-label="모바일 메뉴 열기"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+    <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+      <div class="drawer-header">
+        <button
+          class="drawer-close-btn"
+          id="drawerCloseBtn"
+          type="button"
+          aria-label="모바일 메뉴 닫기"
+        >
+          &times;
+        </button>
+      </div>
+      <nav aria-label="모바일 메뉴">
+        <ul class="drawer-menu">
+          <li><a href="sub01.html">회사소개</a></li>
+          <li><a href="sub02.html">제품소개</a></li>
+          <li><a href="sub03.html">온라인문의</a></li>
+          <li><a href="sub04.html">게시판</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div class="visual">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide-bg-01">
+            <div class="slide-caption">
+              <p>ABOUT US</p>
+              <h2>회사소개</h2>
+            </div>
+          </div>
+          <div class="swiper-slide slide-bg-02">
+            <div class="slide-caption">
+              <p>OUR PRODUCT</p>
+              <h2>제품소개</h2>
+            </div>
+          </div>
+          <div class="swiper-slide slide-bg-03">
+            <div class="slide-caption">
+              <p>CONTACT</p>
+              <h2>온라인문의</h2>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+
+    <main class="main-content">
+      <section class="content-section">
+        <div class="content-grid">
+          <article class="content-card pointmall-card">
+            <div class="content-head">
+              <h2>포인트몰</h2>
+            </div>
+            <div class="pointmall-body">
+              <div class="pointmall-text">
+                <h3>이달의 딜</h3>
+                <p>망설이면 품절! 지금이 구매찬스!</p>
+                <p>이달의 특가 상품을 만나보세요.</p>
+                <a class="content-btn" href="#">포인트몰 바로가기</a>
+              </div>
+              <img
+                src="https://images.unsplash.com/photo-1607082349566-187342175e2f?auto=format&fit=crop&w=900&q=80"
+                alt="포인트몰 대표 이미지"
+              />
+            </div>
+          </article>
+
+          <article class="content-card video-card">
+            <div class="content-head content-head--between">
+              <h2>HD현대오일뱅크 Youtube</h2>
+              <a href="#">채널 보러가기</a>
+            </div>
+            <div class="video-wrap">
+              <iframe
+                src="https://www.youtube.com/embed/aqz-KE-bpKQ"
+                title="HD현대오일뱅크 Youtube 영상"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                  web-share;
+                "
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="content-section">
+        <div class="content-grid four-columns">
+          <article class="content-card custom-card">
+            <div class="content-head">
+              <h2>회사소개</h2>
+            </div>
+            <div class="custom-card-body">
+              <p>
+                우리 회사의 비전과 미션, 그리고 주요 연혁을 확인하실 수
+                있습니다.
+              </p>
+              <a class="content-btn" href="sub01.html">자세히 보기</a>
+            </div>
+          </article>
+          <article class="content-card custom-card">
+            <div class="content-head">
+              <h2>제품소개</h2>
+            </div>
+            <div class="custom-card-body">
+              <p>당사의 최신 기술력으로 만들어진 다양한 제품을 만나보세요.</p>
+              <a class="content-btn" href="sub02.html">더 알아보기</a>
+            </div>
+          </article>
+          <article class="content-card custom-card">
+            <div class="content-head">
+              <h2>온라인문의</h2>
+            </div>
+            <div class="custom-card-body">
+              <p>궁금한 점이 있으신가요? 언제든 문의해 주세요.</p>
+              <a class="content-btn" href="sub03.html">문의하기</a>
+            </div>
+          </article>
+          <article class="content-card custom-card">
+            <div class="content-head">
+              <h2>게시판</h2>
+            </div>
+            <div class="custom-card-body">
+              <p>공지사항, 자료실 등 다양한 정보를 확인하실 수 있습니다.</p>
+              <a class="content-btn" href="sub04.html">게시판 바로가기</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <section class="footer-company">
+          <a class="footer-logo" href="#">로고</a>
+          <p>홈페이지코리아</p>
+          <p>대표: 홍길동 | 사업자등록번호: 107-88-55192</p>
+          <p>
+            주소: 서울특별시 영등포구 경인로 775 에이스하이테크시티 2동 202호
+          </p>
+          <p>문의: sales@homepagekorea.com</p>
+          <p class="footer-copy">© 2026 HOMEPAGEKOREA. ALL RIGHTS RESERVED.</p>
+        </section>
+
+        <nav class="footer-nav" aria-label="푸터 메뉴">
+          <div class="footer-column">
+            <h3>회사소개</h3>
+            <ul>
+              <li><a href="#">인사말</a></li>
+              <li><a href="#">연혁</a></li>
+              <li><a href="#">오시는 길</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>제품소개</h3>
+            <ul>
+              <li><a href="#">대표 제품</a></li>
+              <li><a href="#">기능 안내</a></li>
+              <li><a href="#">도입 사례</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>온라인문의</h3>
+            <ul>
+              <li><a href="#">문의 접수</a></li>
+              <li><a href="#">견적 요청</a></li>
+              <li><a href="#">자주 묻는 질문</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>게시판</h3>
+            <ul>
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">자료실</a></li>
+              <li><a href="#">블로그</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

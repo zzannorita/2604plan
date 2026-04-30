@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1 class="logo">LOGO</h1>
+      <nav class="menu" aria-label="주 메뉴">
+        <ul>
+          <li><a href="#">회사소개</a></li>
+          <li><a href="#">제품소개</a></li>
+          <li><a href="#">온라인문의</a></li>
+          <li><a href="#">게시판</a></li>
+        </ul>
+      </nav>
+      <a class="contact-btn" href="#">CONTACT US</a>
+      <button
+        class="hamburger-btn"
+        type="button"
+        aria-label="모바일 메뉴 열기"
+        aria-expanded="false"
+        aria-controls="mobileDrawer"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <aside class="mobile-drawer" id="mobileDrawer" aria-label="모바일 메뉴">
+      <nav aria-label="모바일 주 메뉴">
+        <ul>
+          <li><a href="#">회사소개</a></li>
+          <li><a href="#">제품소개</a></li>
+          <li><a href="#">온라인문의</a></li>
+          <li><a href="#">게시판</a></li>
+        </ul>
+      </nav>
+      <a class="contact-btn mobile-contact-btn" href="#">CONTACT US</a>
+    </aside>
+    <main class="main-content">
+      <section class="hero-slider" aria-label="메인 비주얼 슬라이드">
+        <div
+          class="hero-slide is-active"
+          style="
+            background-image: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1920&q=80');
+          "
+        >
+          <div class="hero-content">
+            <h2 class="hero-title">Creative Business</h2>
+            <p class="hero-subtitle">브랜드의 가치를 높이는 디지털 경험</p>
+          </div>
+        </div>
+        <div
+          class="hero-slide"
+          style="
+            background-image: url('https://images.unsplash.com/photo-1493244040629-496f6d136cc3?auto=format&fit=crop&w=1920&q=80');
+          "
+        >
+          <div class="hero-content">
+            <h2 class="hero-title">Smart Solutions</h2>
+            <p class="hero-subtitle">고객 중심의 전략과 구현</p>
+          </div>
+        </div>
+        <div
+          class="hero-slide"
+          style="
+            background-image: url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1920&q=80');
+          "
+        >
+          <div class="hero-content">
+            <h2 class="hero-title">Future Ready</h2>
+            <p class="hero-subtitle">변화에 강한 서비스 구축</p>
+          </div>
+        </div>
+        <button
+          class="slider-arrow slider-arrow-prev"
+          type="button"
+          aria-label="이전 슬라이드"
+        >
+          &#10094;
+        </button>
+        <button
+          class="slider-arrow slider-arrow-next"
+          type="button"
+          aria-label="다음 슬라이드"
+        >
+          &#10095;
+        </button>
+        <div class="slider-dots" aria-label="슬라이드 이동 버튼">
+          <button
+            class="slider-dot is-active"
+            type="button"
+            aria-label="1번 슬라이드"
+          ></button>
+          <button
+            class="slider-dot"
+            type="button"
+            aria-label="2번 슬라이드"
+          ></button>
+          <button
+            class="slider-dot"
+            type="button"
+            aria-label="3번 슬라이드"
+          ></button>
+        </div>
+      </section>
+
+      <section class="highlight-grid" aria-label="메인 콘텐츠">
+        <article class="highlight-card pointmall-card">
+          <h2>포인트몰</h2>
+          <div class="pointmall-body">
+            <div class="pointmall-text">
+              <h3>이달의 딜</h3>
+              <p>망설이면 품절! 지금이 구매찬스</p>
+              <p>이달의 특가상품을 만나보세요.</p>
+              <a href="#" class="pointmall-link">포인트몰 바로가기</a>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80"
+              alt="포인트몰 프로모션 이미지"
+            />
+          </div>
+        </article>
+
+        <article class="highlight-card video-card">
+          <div class="video-header">
+            <h2>HD현대오일뱅크 Youtube</h2>
+            <a href="#">채널 보러가기</a>
+          </div>
+          <a href="#" class="video-thumb" aria-label="유튜브 영상 보기">
+            <img
+              src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?auto=format&fit=crop&w=1280&q=80"
+              alt="유튜브 영상 썸네일"
+            />
+          </a>
+        </article>
+      </section>
+
+      <section class="card-grid-section" aria-label="주요 서비스 카드">
+        <div class="card-grid">
+          <article class="service-card">
+            <img
+              class="service-card-img"
+              src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=600&q=80"
+              alt="Creative Business"
+            />
+            <div class="service-card-body">
+              <h3 class="service-card-title">Creative Business</h3>
+              <p class="service-card-desc">
+                브랜드의 가치를 높이는 디지털 경험
+              </p>
+            </div>
+          </article>
+          <article class="service-card">
+            <img
+              class="service-card-img"
+              src="https://images.unsplash.com/photo-1493244040629-496f6d136cc3?auto=format&fit=crop&w=600&q=80"
+              alt="Smart Solutions"
+            />
+            <div class="service-card-body">
+              <h3 class="service-card-title">Smart Solutions</h3>
+              <p class="service-card-desc">고객 중심의 전략과 구현</p>
+            </div>
+          </article>
+          <article class="service-card">
+            <img
+              class="service-card-img"
+              src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=600&q=80"
+              alt="Future Ready"
+            />
+            <div class="service-card-body">
+              <h3 class="service-card-title">Future Ready</h3>
+              <p class="service-card-desc">변화에 강한 서비스 구축</p>
+            </div>
+          </article>
+          <article class="service-card">
+            <img
+              class="service-card-img"
+              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80"
+              alt="Global Network"
+            />
+            <div class="service-card-body">
+              <h3 class="service-card-title">Global Network</h3>
+              <p class="service-card-desc">
+                전 세계를 연결하는 비즈니스 파트너십
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-top">
+          <p class="footer-brand">HOMEPAGE KOREA</p>
+          <a href="#" class="footer-top-btn">TOP</a>
+        </div>
+        <div class="footer-main">
+          <div class="footer-info">
+            <strong>(주)홈페이지코리아</strong>
+            <p>
+              대표이사 김아무개 | 사업자등록번호 123-45-67890 | 통신판매업신고
+              2026-서울강남-1234
+            </p>
+            <p>
+              서울특별시 강남구 테헤란로 123, 4층 | TEL 02-1234-5678 | FAX
+              02-1234-9876
+            </p>
+            <p>
+              개인정보관리책임자 김아무개 | E-MAIL hello@homepagekorea.co.kr
+            </p>
+            <a href="#" class="footer-policy">개인정보처리방침</a>
+          </div>
+          <nav class="footer-links" aria-label="푸터 메뉴">
+            <a href="#">회사소개</a>
+            <a href="#">제품소개</a>
+            <a href="#">온라인문의</a>
+            <a href="#">게시판</a>
+          </nav>
+        </div>
+        <p class="footer-copy">© 2026 HOMEPAGE KOREA. ALL RIGHTS RESERVED.</p>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
